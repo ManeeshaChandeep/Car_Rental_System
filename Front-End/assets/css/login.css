@@ -1,0 +1,191 @@
+.desktop22-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.desktop22-desktop2 {
+    width: 100%;
+    height: 714px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    background-color: rgba(236, 240, 241, 1);
+}
+.desktop22-frame1 {
+    top: 0px;
+    left: 401px;
+    width: 476px;
+    height: 714px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-end;
+    flex-shrink: 0;
+    border-radius: 45px;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.desktop22-text02 {
+    top: 469px;
+    left: 45px;
+    color: rgba(127, 140, 141, 1);
+    width: 441px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Light;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop22-text04 {
+    top: 417px;
+    left: 104px;
+    color: rgba(0, 0, 0, 1);
+    width: 141px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Light;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop22-text06 {
+    top: 530px;
+    left: 218px;
+    color: rgba(255, 255, 255, 1);
+    width: 76px;
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop22-text08 {
+    top: 90px;
+    left: 189px;
+    color: rgba(0, 0, 0, 1);
+    width: 99px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    font-style: Light;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop22-text10 {
+    top: 161px;
+    left: 60px;
+    color: rgba(0, 0, 0, 1);
+    width: 217px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.desktop22-textinput {
+    width: 354px;
+    height: 50px;
+    top: 234px;
+    left: 68px;
+    position: absolute;
+}
+
+.desktop22-checkbox {
+    top: 410px;
+    left: 60px;
+    width: 37px;
+    height: 33px;
+    position: absolute;
+}
+.desktop22-container1 {
+    flex: 0 0 auto;
+    width: auto;
+    border: 2px dashed rgba(120, 120, 120, 0.4);
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.input2{
+    top: 325px;
+    left: 68px;
+    width: 354px;
+    height: 59px;
+    position: absolute;
+}
+
+
+.btnlogin{
+        top: 521px;
+        left: 68px;
+        width: 354px;
+        height: 42px;
+        position: absolute;
+        border-radius: 45px;
+    color:white;
+    background-color: #1743e3;
+
+}
+.signup{
+    top: 161px;
+    left: 277px;
+    color: rgba(0, 0, 0, 1);
+    width: 99px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Semi Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.lostpswrd{
+    top: 417px;
+    left: 296px;
+    color: rgba(127, 140, 141, 1);
+    width: 127px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Semi Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
