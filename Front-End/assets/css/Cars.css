@@ -320,122 +320,72 @@ justify-content: space-between;
 
 /*------------------------------*/
 /*------------------------------*/
-.desktop41-container {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-}
-.desktop41-desktop4 {
-    width: 100%;
-    height: 2298px;
-    display: flex;
-    overflow: hidden;
+
+/*--------------------------------Customer Page---------------------------------*/
+
+/*Browse Car*/
+
+.carCardSet1 {
+    width: 80vw;
+    height: 50vh;
+    /*border: 1px solid;*/
+    left: 0;
+    right: 0;
+    margin: auto;
     position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 1);
+    top: 350px;
+    display: flex;
+    justify-content: space-between;
 }
-.desktop41-rectangle8 {
-    top: 97px;
-    left: 0px;
-    width: 1303px;
-    height: 90px;
-    position: absolute;
+
+
+#carSection1 > .carSec > .carCardSet1:nth-child(3), .carCardSet1:nth-child(4) {
+    margin-top: 150px;
+    /*border: 1px solid;*/
 }
-.desktop41-rectangle9 {
-    top: 1947px;
-    left: 0px;
-    width: 1303px;
-    height: 90px;
+
+.carTypTex {
     position: absolute;
+    top: -50px;
+
+    font-size: 25px;
 }
-.desktop41-text {
-    top: 113px;
-    left: 497px;
-    color: rgba(255, 255, 255, 1);
-    height: auto;
-    position: absolute;
-    font-size: 48px;
-    font-style: Extra Bold;
-    text-align: center;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
+
+/*rent car*/
+
+.rentCarSection {
+    position: relative;
+    top: 390px;
 }
-.desktop41-text2 {
-    top: 1464px;
-    left: 479px;
-    color: rgba(255, 255, 255, 1);
-    height: auto;
-    position: absolute;
-    font-size: 48px;
-    font-style: Extra Bold;
-    text-align: center;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
+
+#addCart:hover {
+    color: white;
 }
-.desktop41-text4 {
-    top: 1963px;
-    left: 479px;
-    color: rgba(255, 255, 255, 1);
-    height: auto;
-    position: absolute;
-    font-size: 48px;
-    font-style: Extra Bold;
-    text-align: center;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
+
+#res:hover {
+    background: white;
+    color: red;
 }
-.desktop41-rectangle10 {
-    top: 274px;
-    left: 110px;
-    width: 492px;
-    height: 272px;
-    position: absolute;
+
+/*booking detail*/
+
+.bookingDetailSection {
+    position: relative;
+    top: 480px;
 }
-.desktop41-rectangle12 {
-    top: 725px;
-    left: 110px;
-    width: 492px;
-    height: 272px;
-    position: absolute;
+
+.bookingCard {
+    position: relative;
+    top: 60px;
 }
-.desktop41-rectangle14 {
-    top: 1164px;
-    left: 110px;
-    width: 492px;
-    height: 272px;
-    position: absolute;
+
+/*Payment detail*/
+.paymentDetailSection {
+    position: relative;
+    top: 580px;
 }
-.desktop41-rectangle15 {
-    top: 1164px;
-    left: 707px;
-    width: 492px;
-    height: 272px;
-    position: absolute;
-}
-.desktop41-rectangle13 {
-    top: 725px;
-    left: 707px;
-    width: 492px;
-    height: 272px;
-    position: absolute;
-}
-.desktop41-rectangle11 {
-    top: 274px;
-    left: 707px;
-    width: 492px;
-    height: 272px;
-    position: absolute;
+
+.paymentCard {
+    position: relative;
+    top: 60px;
 }

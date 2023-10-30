@@ -317,3 +317,53 @@ font-size:18px;
     }
 
 }
+
+
+/*-----------------------------*/
+/*------------------------------*/
+.desktop6-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.desktop6-desktop6 {
+    width: 100%;
+    height: 859px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+}
+.desktop6-rectangle20 {
+    top: 93px;
+    left: 104px;
+    width: 496px;
+    height: 321px;
+    position: absolute;
+}
+.desktop6-rectangle22 {
+    top: 486px;
+    left: 104px;
+    width: 496px;
+    height: 321px;
+    position: absolute;
+}
+.desktop6-rectangle23 {
+    top: 486px;
+    left: 706px;
+    width: 496px;
+    height: 321px;
+    position: absolute;
+}
+.desktop6-rectangle21 {
+    top: 93px;
+    left: 706px;
+    width: 496px;
+    height: 321px;
+    position: absolute;
+}
