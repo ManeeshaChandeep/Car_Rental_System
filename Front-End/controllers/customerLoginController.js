@@ -1,4 +1,12 @@
 let customer={
     id:'',
-    name:''
+    name:'',
+    email:'',
+    phonenumber:'',
+    username:'',
+    password:'',
+    nicnumber:'',
+    address:'',
+    idcardfrontphoto:'',
+    idcardbackphoto:'',
 }
