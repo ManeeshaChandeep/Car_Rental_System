@@ -7,4 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 @Configuration
 @ComponentScan(basePackages = {"spring.controller","spring.advisor"})
 public class WebAppConfig {
+        public WebAppConfig(){
+                System.out.println("WebAppConfig:Web App Instantiated");
+        }
 }
+

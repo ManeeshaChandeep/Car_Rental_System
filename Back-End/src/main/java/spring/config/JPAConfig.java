@@ -1,4 +1,4 @@
 package spring.config;
 
-public class JAPConfig {
+public class JPAConfig {
 }
