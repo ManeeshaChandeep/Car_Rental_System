@@ -1,4 +1,4 @@
-.desktop22-container {
+.desktop8-container {
     width: 100%;
     display: flex;
     overflow: auto;
@@ -6,204 +6,7 @@
     align-items: center;
     flex-direction: column;
 }
-.desktop22-desktop2 {
-    width: 100%;
-    height: 714px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: center;
-    flex-shrink: 0;
-    justify-content: flex-start;
-    background-color: rgba(236, 240, 241, 1);
-}
-.desktop22-frame1 {
-    top: 0px;
-    left: 401px;
-    width: 476px;
-    height: 714px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-end;
-    flex-shrink: 0;
-    border-radius: 45px;
-    justify-content: flex-start;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.desktop22-text02 {
-    top: 469px;
-    left: 45px;
-    color: rgba(127, 140, 141, 1);
-    width: 441px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Light;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-}
-.desktop22-text04 {
-    top: 417px;
-    left: 104px;
-    color: rgba(0, 0, 0, 1);
-    width: 141px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Light;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-}
-.desktop22-text06 {
-    top: 530px;
-    left: 218px;
-    color: rgba(255, 255, 255, 1);
-    width: 76px;
-    height: auto;
-    position: absolute;
-    font-size: 20px;
-    font-style: Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-}
-.desktop22-text08 {
-    top: 90px;
-    left: 189px;
-    color: rgba(0, 0, 0, 1);
-    width: 99px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-}
-.desktop22-text10 {
-    top: 161px;
-    left: 60px;
-    color: rgba(0, 0, 0, 1);
-    width: 217px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-}
-
-.desktop22-textinput {
-    width: 354px;
-    height: 50px;
-    top: 234px;
-    left: 68px;
-    position: absolute;
-}
-
-.desktop22-checkbox {
-    top: 410px;
-    left: 60px;
-    width: 37px;
-    height: 33px;
-    position: absolute;
-}
-.desktop22-container1 {
-    flex: 0 0 auto;
-    width: auto;
-    border: 2px dashed rgba(120, 120, 120, 0.4);
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-.input2{
-    top: 325px;
-    left: 68px;
-    width: 354px;
-    height: 59px;
-    position: absolute;
-}
-
-
-.btnlogin{
-        top: 521px;
-        left: 68px;
-        width: 354px;
-        height: 42px;
-        position: absolute;
-        border-radius: 45px;
-    color:white;
-    background-color: #1743e3;
-
-}
-.signup{
-    top: 161px;
-    left: 277px;
-    color: rgba(0, 0, 0, 1);
-    width: 99px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-}
-.lostpswrd{
-    top: 417px;
-    left: 296px;
-    color: rgba(127, 140, 141, 1);
-    width: 127px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: Semi Bold;
-    text-align: left;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-}
-
-/*===================*/
-/*register*/
-/*==================*/
-
-
-.desktop7-container {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-}
-.desktop7-desktop7 {
+.desktop8-desktop8 {
     width: 100%;
     height: 714px;
     display: flex;
@@ -213,7 +16,7 @@
     flex-shrink: 0;
     background-color: rgba(255, 255, 255, 1);
 }
-.desktop7-text {
+.desktop8-text {
     top: 28px;
     left: 532px;
     color: rgba(0, 0, 0, 1);
@@ -228,65 +31,121 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.yourid {
-    top: 137px;
-    left: 105px;
-    width: 341px;
+.registernumber {
+    top: 135px;
+    left: 75px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.yourname {
-    top: 229px;
-    left: 108px;
-    width: 341px;
+.brand {
+    top: 222px;
+    left: 75px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.email {
-    top: 324px;
-    left: 108px;
-    width: 341px;
+.rates{
+    top: 309px;
+    left: 75px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.phonenum{
-    top: 417px;
-    left: 105px;
-    width: 341px;
+.frontview {
+    top: 396px;
+    left: 75px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.username {
-    top: 137px;
-    left: 838px;
-    width: 341px;
+.backview {
+    top: 483px;
+    left: 75px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.password {
-    top: 229px;
-    left: 838px;
-    width: 341px;
+.freemilage {
+    top: 570px;
+    left: 75px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.nicnumber {
-    top: 324px;
-    left: 838px;
-    width: 341px;
+.sideview {
+    top: 135px;
+    left: 494px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.address {
-    top: 417px;
-    left: 838px;
-    width: 341px;
+.interior {
+    top: 222px;
+    left: 494px;
+    width: 250px;
     height: 46px;
     position: absolute;
 }
-.desktop7-text02 {
-    top: 116px;
-    left: 105px;
+.numberofpassengers {
+    top: 309px;
+    left: 494px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.type {
+    top: 396px;
+    left: 494px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.dailyrate {
+    top: 483px;
+    left: 494px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.mothlyrate {
+    top: 135px;
+    left: 926px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.priceofextrakm {
+    top: 222px;
+    left: 926px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.freemilage{
+    top: 309px;
+    left: 926px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.color {
+    top: 396px;
+    left: 926px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.vehicleavailabilitytype {
+    top: 483px;
+    left: 926px;
+    width: 250px;
+    height: 46px;
+    position: absolute;
+}
+.desktop8-text02 {
+    top: 111px;
+    left: 75px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -299,9 +158,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text04 {
-    top: 205px;
-    left: 108px;
+.desktop8-text04 {
+    top: 198px;
+    left: 75px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -314,9 +173,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text06 {
-    top: 300px;
-    left: 105px;
+.desktop8-text06 {
+    top: 285px;
+    left: 75px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -329,9 +188,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text08 {
-    top: 393px;
-    left: 108px;
+.desktop8-text08 {
+    top: 372px;
+    left: 75px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -344,9 +203,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text10 {
-    top: 113px;
-    left: 838px;
+.desktop8-text10 {
+    top: 459px;
+    left: 75px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -359,9 +218,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text12 {
-    top: 205px;
-    left: 838px;
+.desktop8-text12 {
+    top: 546px;
+    left: 75px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -374,9 +233,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text14 {
-    top: 300px;
-    left: 838px;
+.desktop8-text14 {
+    top: 111px;
+    left: 494px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -389,9 +248,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text16 {
-    top: 393px;
-    left: 838px;
+.desktop8-text16 {
+    top: 198px;
+    left: 494px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -404,9 +263,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text18 {
-    top: 535px;
-    left: 108px;
+.desktop8-text18 {
+    top: 285px;
+    left: 494px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -419,9 +278,9 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.desktop7-text20 {
-    top: 588px;
-    left: 108px;
+.desktop8-text20 {
+    top: 372px;
+    left: 494px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
@@ -434,31 +293,153 @@
     font-stretch: normal;
     text-decoration: none;
 }
-.uploadidcardfrontphoto{
-    top: 526px;
-    left: 385px;
-    width: 127px;
-    height: 41px;
+.desktop8-text22 {
+    top: 459px;
+    left: 494px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
     position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
 }
-.buttonregister{
-    top: 579px;
-    left: 1052px;
+.desktop8-text24 {
+    top: 111px;
+    left: 926px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop8-text26 {
+    top: 198px;
+    left: 926px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop8-text28 {
+    top: 285px;
+    left: 926px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop8-text30 {
+    top: 372px;
+    left: 926px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop8-text32 {
+    top: 459px;
+    left: 926px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.buttonsave {
+    top: 643px;
+    left: 744px;
     width: 127px;
     height: 41px;
     position: absolute;
     border-radius: 30px;
 }
-.uploadidcardbackphoto{
-    top: 579px;
-    left: 385px;
+.buttonupdate{
+    top: 643px;
+    left: 919px;
     width: 127px;
     height: 41px;
     position: absolute;
+    border-radius: 30px;
 }
-.desktop7-text22 {
-    top: 588px;
-    left: 1077px;
+.buttondelete {
+    top: 643px;
+    left: 1094px;
+    width: 127px;
+    height: 41px;
+    position: absolute;
+    border-radius: 30px;
+}
+.desktop8-text34 {
+    top: 651px;
+    left: 769px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop8-text36 {
+    top: 651px;
+    left: 944px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.desktop8-text38 {
+    top: 651px;
+    left: 1119px;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
