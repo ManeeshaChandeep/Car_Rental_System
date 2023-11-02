@@ -25,6 +25,7 @@ public class DriverServiceImple implements DriverService {
 
     @Override
     public void saveDriver(DriverDTO driverDTO){
+        System.out.println(driverDTO);
         driverRepo.save(mapper.map(driverDTO, Driver.class));
     }
     @Override

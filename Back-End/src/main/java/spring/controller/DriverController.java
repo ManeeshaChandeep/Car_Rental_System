@@ -1,6 +1,4 @@
 package spring.controller;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import spring.dto.DriverDTO;
@@ -16,7 +14,8 @@ public class DriverController {
 
 
     @PostMapping("/save")
-    public ResponseUtil saveDriver(DriverDTO dto) {
+    public ResponseUtil saveDriver(@RequestBody DriverDTO dto) {
+        System.out.println(dto);
        driverService.saveDriver(dto);
         return new ResponseUtil("OK", "Driver Saved", dto);
     }

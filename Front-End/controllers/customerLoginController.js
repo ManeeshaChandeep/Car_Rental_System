@@ -1,4 +1,4 @@
-
+let customerURL='http://localhost:8080/carRental/customer/';
 
 function getCustomerOB() {
     let customer={
@@ -13,6 +13,26 @@ function getCustomerOB() {
         idcardfrontphoto:$('#fileIDFrontPhoto').val(),
         idcardbackphoto:$('#fileIDBackPhoto').val(),
     }
-
+return customer;
 
 }
+
+
+$('#btnRegisterCustomer').click(function () {
+
+    let customerJSON = JSON.stringify(getCustomerOB());
+    console.log(customerJSON);
+
+    $.ajax({
+        url: customerURL + 'save',
+        method: 'POST',
+        data: customerJSON,
+        contentType: 'application/json',
+        success: function (res) {
+            console.log(res.state);
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+});

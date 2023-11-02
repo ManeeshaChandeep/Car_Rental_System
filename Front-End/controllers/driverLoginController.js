@@ -1,3 +1,6 @@
+let driveURL='http://localhost:8080/carRental/driver/';
+let customerURL='http://localhost:8080/carRental/customer/';
+
 function getDriverOB(){
     let driver={
 
@@ -14,5 +17,39 @@ function getDriverOB(){
 
     }
 
+    return driver;
 
+
+}
+
+$('#btnSaveDriver').click(function () {
+
+   let driverJSON = JSON.stringify(getDriverOB());
+   console.log(driverJSON);
+
+   $.ajax({
+      url: driveURL + 'save',
+      method: 'POST',
+      data: driverJSON,
+      contentType: 'application/json',
+      success: function (res) {
+         console.log(res.state);
+      },
+      error: function (error) {
+         console.error('Error:', error);
+      }
+   });
+});
+
+function loadAllDrivers(){
+   $.ajax({
+      url: driveURL + 'getall',
+      method: 'GET',
+      success: function (res) {
+         console.log(res.data);
+      },
+      error: function (error) {
+         console.error('Error:', error);
+      }
+   });
 }
