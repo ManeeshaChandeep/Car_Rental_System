@@ -36,3 +36,16 @@ $('#btnRegisterCustomer').click(function () {
         }
     });
 });
+
+function loadAllCustomers(){
+    $.ajax({
+        url: customerURL + 'getall',
+        method: 'GET',
+        success: function (res) {
+            console.log(res.data);
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+}
