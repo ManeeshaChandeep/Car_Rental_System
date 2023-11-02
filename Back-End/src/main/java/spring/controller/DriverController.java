@@ -1,12 +1,34 @@
 package spring.controller;
 
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import spring.dto.DriverDTO;
+import spring.service.DriverService;
+import spring.util.ResponseUtil;
 
 @RestController
 @RequestMapping("/driver")
 @CrossOrigin
 public class DriverController {
+    @Autowired
+    DriverService driverService;
+
+
+    @PostMapping("/save")
+    public ResponseUtil saveDriver(DriverDTO dto) {
+       driverService.saveDriver(dto);
+        return new ResponseUtil("OK", "Driver Saved", dto);
+    }
+
+    @GetMapping("/getall")
+    public ResponseUtil getAllDrivers() {
+        return new ResponseUtil("", "",driverService.getAllDrivers());
+    }
+
+    @GetMapping("/GetOB")
+    public ResponseUtil getDriver(String id) {
+        return new ResponseUtil("", "", getDriver(id));
+    }
+
 }
