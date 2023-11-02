@@ -1,5 +1,5 @@
 let driveURL='http://localhost:8080/carRental/driver/';
-let customerURL='http://localhost:8080/carRental/customer/';
+
 
 function getDriverOB(){
     let driver={

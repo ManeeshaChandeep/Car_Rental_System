@@ -1,4 +1,4 @@
-
+let carURL='http://localhost:8080/carRental/car/';
 function getCarOB(){
     let car={
         registernumber:$('#txtRegisterNumber').val(),
@@ -18,5 +18,24 @@ function getCarOB(){
         vehicleavailabilitytype:$('#slctVehicleAvailabilityType').val(),
     }
 
-
+return car;
 }
+
+$('#btnSaveCar').click(function () {
+
+    let carJSON = JSON.stringify(getCarOB());
+    console.log(carJSON);
+
+    $.ajax({
+        url: driveURL + 'save',
+        method: 'POST',
+        data: carJSON,
+        contentType: 'application/json',
+        success: function (res) {
+            console.log(res.state);
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+});
