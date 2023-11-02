@@ -27,7 +27,7 @@ $('#btnSaveCar').click(function () {
     console.log(carJSON);
 
     $.ajax({
-        url: driveURL + 'save',
+        url: carURL + 'save',
         method: 'POST',
         data: carJSON,
         contentType: 'application/json',
@@ -39,3 +39,16 @@ $('#btnSaveCar').click(function () {
         }
     });
 });
+
+function loadAllCars(){
+    $.ajax({
+        url: carURL + 'getall',
+        method: 'GET',
+        success: function (res) {
+            console.log(res.data);
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+}
