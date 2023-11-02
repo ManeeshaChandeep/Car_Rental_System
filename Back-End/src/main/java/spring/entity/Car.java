@@ -28,4 +28,8 @@ public class Car {
     String numberofpassengers;
     String type;
     String dailyrate;
+    String mothlyrate;
+    String priceofextrakm;
+    String vehicleavailabilitytype;
+    String color;
 }
