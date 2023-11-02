@@ -21,6 +21,8 @@ function getCarOB(){
 return car;
 }
 
+
+
 $('#btnSaveCar').click(function () {
 
     let carJSON = JSON.stringify(getCarOB());

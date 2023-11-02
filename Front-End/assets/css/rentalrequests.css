@@ -326,3 +326,8 @@ justify-content: space-between;
 .social-media{
     right: 5px;
 }
+
+.container{
+    position: relative;
+    top: 100px;
+}
