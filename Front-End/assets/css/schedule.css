@@ -326,3 +326,7 @@ justify-content: space-between;
 .social-media{
     right: 5px;
 }
+.ScheduleTable{
+    position: relative;
+    top: 100px;
+}
