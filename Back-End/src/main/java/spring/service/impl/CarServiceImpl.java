@@ -24,7 +24,9 @@ public class CarServiceImpl implements CarService{
     public void saveCar(CarDTO carDTO){carRepo.save(mapper.map(carDTO, Car.class));}
 
     @Override
-    public CarDTO getCar(String registernumber{return  mapper.map(carRepo.findById(registernumber),CarDTO.class);}
+    public CarDTO getCar(String registernumber){
+        return  mapper.map(carRepo.findById(registernumber),CarDTO.class);
+    }
 
     @Override
     public List<CarDTO> getAllCars(){

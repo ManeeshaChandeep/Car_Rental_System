@@ -10,22 +10,23 @@ import spring.util.ResponseUtil;
 @RequestMapping("/car")
 @CrossOrigin
 public class CarController {
-@Autowired
+    @Autowired
     CarService carService;
 
-@PostMapping("/save")
-    public ResponseUtil saveCar(CarDTO dto){
-    carService.saveCar(dto);
-    return new ResponseUtil("OK","Car Saved",dto);
-}
-}
+    @PostMapping("/save")
+    public ResponseUtil saveCar(CarDTO dto) {
+        carService.saveCar(dto);
+        return new ResponseUtil("OK", "Car Saved", dto);
+    }
 
-@GetMapping("/getall")
-public ResponseUtil getAllCars(){
-    return new ResponseUtil("","",carService.getAllCars());
-}
 
-@GetMapping("/GetOB")
-public ResponseUtil getCar(String id){
-    return new ResponseUtil("","",carService.getCar(id));
+    @GetMapping("/getall")
+    public ResponseUtil getAllCars() {
+        return new ResponseUtil("", "", carService.getAllCars());
+    }
+
+    @GetMapping("/GetOB")
+    public ResponseUtil getCar(String id) {
+        return new ResponseUtil("", "", carService.getCar(id));
+    }
 }

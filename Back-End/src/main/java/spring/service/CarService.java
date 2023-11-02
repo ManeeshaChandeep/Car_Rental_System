@@ -5,7 +5,6 @@ import spring.dto.CarDTO;
 import java.util.List;
 
 public interface CarService {
-    void saveCar();
 
     void saveCar(CarDTO carDTO);
 

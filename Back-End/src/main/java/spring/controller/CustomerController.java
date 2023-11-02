@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import spring.dto.CustomerDTO;
 import spring.service.CarService;
+import spring.service.CustomerService;
 import spring.util.ResponseUtil;
 
 @RestController
@@ -12,7 +13,7 @@ import spring.util.ResponseUtil;
 
 public class CustomerController {
 @Autowired
-    CarService customerService;
+CustomerService customerService;
 @PostMapping("/save")
     public ResponseUtil saveCustomer(CustomerDTO dto){
     return new ResponseUtil("OK","Customer Saved",dto);
@@ -20,7 +21,7 @@ public class CustomerController {
 
 @GetMapping("/getall")
     public ResponseUtil getAllCustomers(){
-    return new ResponseUtil("","",customerService.get);
+    return new ResponseUtil("","",customerService.getAllCustomers());
 }
 
 @GetMapping("/GetOB")

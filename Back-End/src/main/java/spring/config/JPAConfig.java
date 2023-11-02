@@ -36,17 +36,17 @@ public class JPAConfig {
         LocalContainerEntityManagerFactoryBean factory= new LocalContainerEntityManagerFactoryBean();
         factory.setDataSource(ds);// for access a data source
         factory.setJpaVendorAdapter(vad); // for accessing a vendor (hibernate)
-        factory.setPackagesToScan(env.getRequiredProperty("pro.entity"));// set entity records location to the Spring Data JPA
+        factory.setPackagesToScan("spring.entity");// set entity records location to the Spring Data JPA
         return factory;
     }
 
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource ds= new DriverManagerDataSource();
-        ds.setUsername(env.getRequiredProperty("pro.username"));
-        ds.setPassword(env.getRequiredProperty("pro.password"));
-        ds.setDriverClassName(env.getRequiredProperty("pro.driver"));
-        ds.setUrl(env.getRequiredProperty("pro.url"));
+        ds.setUsername("root");
+        ds.setPassword("1234");
+        ds.setDriverClassName("com.mysql.jdbc.Driver");
+        ds.setUrl("jdbc:mysql://localhost:3306/car-rental?createDatabaseIfNotExist=true");
         return ds;
     }
 
@@ -55,7 +55,7 @@ public class JPAConfig {
         HibernateJpaVendorAdapter va= new HibernateJpaVendorAdapter();
         va.setDatabase(Database.MYSQL); // what is the DB
         va.setGenerateDdl(true); //Data definition language enable
-        va.setDatabasePlatform(env.getRequiredProperty("pro.dial")); //platform version
+        va.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect"); //platform version
         va.setShowSql(true); //if you wanted to see generated sql
         return va;
     }
