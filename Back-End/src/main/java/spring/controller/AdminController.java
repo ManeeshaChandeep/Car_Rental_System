@@ -14,7 +14,7 @@ public class AdminController {
     AdminService adminService;
 
     @PostMapping("/save")
-    public ResponseUtil saveAdmin(AdminDTO dto){
+    public ResponseUtil saveAdmin(@RequestBody AdminDTO dto){
         adminService.saveAdmin(dto);
         return new ResponseUtil("OK","Admin saved",dto);
     }

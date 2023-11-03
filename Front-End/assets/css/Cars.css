@@ -467,7 +467,7 @@ justify-content: space-between;
 }
 
 .carTypTex {
-    position: absolute;
+    /*position: absolute;*/
     top: -50px;
 
 
@@ -649,7 +649,7 @@ justify-content: space-between;
 }
 
 .carTypTex {
-    position: absolute;
+    /*position: absolute;*/
     top: -50px;
 
     font-size: 25px;
@@ -693,3 +693,7 @@ justify-content: space-between;
     position: relative;
     top: 60px;
 }
+/*.carsection{*/
+/*    position: relative;*/
+/*    top: -100px;*/
+/*}*/

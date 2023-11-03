@@ -41,6 +41,26 @@ $('#btnSaveDriver').click(function () {
    });
 });
 
+
+$('#updated*river').click(function () {
+
+   let driverJSON = JSON.stringify(getDriverOB());
+   console.log(driverJSON);
+
+   $.ajax({
+      url: driveURL + 'update',
+      method: 'PUT',
+      data: driverJSON,
+      contentType: 'application/json',
+      success: function (res) {
+         console.log(res.state);
+      },
+      error: function (error) {
+         console.error('Error:', error);
+      }
+   });
+});
+
 function loadAllDrivers(){
    $.ajax({
       url: driveURL + 'getall',

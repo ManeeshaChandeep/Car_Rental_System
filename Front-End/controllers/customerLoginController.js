@@ -37,6 +37,26 @@ $('#btnRegisterCustomer').click(function () {
     });
 });
 
+$('#-updatecu*stomer').click(function () {
+
+    let customerJSON = JSON.stringify(getCustomerOB());
+    console.log(customerJSON);
+
+    $.ajax({
+        url: customerURL + 'update',
+        method: 'PUT',
+        data: customerJSON,
+        contentType: 'application/json',
+        success: function (res) {
+            console.log(res.state);
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+});
+
+
 function loadAllCustomers(){
     $.ajax({
         url: customerURL + 'getall',

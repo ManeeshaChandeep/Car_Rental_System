@@ -1,4 +1,6 @@
 let carURL='http://localhost:8080/carRental/car/';
+
+
 function getCarOB(){
     let car={
         registernumber:$('#txtRegisterNumber').val(),
@@ -23,6 +25,7 @@ return car;
 
 
 
+
 $('#btnSaveCar').click(function () {
 
     let carJSON = JSON.stringify(getCarOB());
@@ -42,15 +45,101 @@ $('#btnSaveCar').click(function () {
     });
 });
 
+
+$('#btnUpdateCar').click(function () {
+
+    let carJSON = JSON.stringify(getCarOB());
+    console.log(carJSON);
+
+    $.ajax({
+        url: carURL + 'update',
+        method: 'PUT',
+        data: carJSON,
+        contentType: 'application/json',
+        success: function (res) {
+            console.log(res.state);
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+});
 function loadAllCars(){
     $.ajax({
         url: carURL + 'getall',
         method: 'GET',
         success: function (res) {
             console.log(res.data);
+            for (let i = 0; i < res.data.length; i++) {
+                loadCarDetails(res.data.length[i])
+            }
         },
         error: function (error) {
             console.error('Error:', error);
         }
     });
+}
+
+function loadCarDetails(car) {
+
+
+    // car.registernumber
+
+
+    let carHtml=`<div style="height: 350px" class="carCard ms-2 me-5">
+                <div class="carImg">
+
+                    <div class="carousel slide" data-bs-ride="carousel" >
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img alt="fontView" class="d-block w-75" src=../assets/images/fitted.jpgg>
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="sideView" class="d-block w-75" src="assets/img/car03.png">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="BackView" class="d-block w-75" src="assets/img/car03.png">
+                            </div>
+                            <div class="carousel-item">
+                                <img alt="InteriorView" class="d-block w-75" src="assets/img/car03.png">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExample1"
+                                type="button">
+                            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" data-bs-slide="next"
+                                data-bs-target="#carouselExampleAutoplaying"
+                                type="button">
+                            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="carDetail">
+                    <div>
+                        <h1>${car.brand}</h1>
+                        <h2 class="dailyPrice">${car.dailyrate}</h2>
+                        <h2 class="monthlyPrice">${car.mothlyrate}LKR/month</h2>
+                    </div>
+                    <div class="typeCon">
+                        <div>
+                            <img alt="logo" height="20" src="assets/img/steering-wheel.png" width="20">
+                            <h1>${car.type}</h1>
+                        </div>
+                        <div>
+                            <img alt="logo" height="20" src="../assets/logos/WhatsApp%20Image%202023-10-31%20at%2001.13.16_a7d8b326.jpg" width="20">
+                            <h1>${car.numberofpassengers}Seats</h1>
+                        </div>
+                        <div>
+                            <img alt="logo" height="20" src="assets/img/petrol-pump.png" width="20">
+                            <h1>${car.vehicleavailabilitytype}</h1>vehicleavailabilitytype
+                        </div>
+                    </div>
+                    <div>
+                        <button class="rentNow btn btn-outline-primary  ">Rent Now</button>
+                    </div>
+                </div>
+            </div>`
 }

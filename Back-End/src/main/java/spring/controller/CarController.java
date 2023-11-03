@@ -14,11 +14,16 @@ public class CarController {
     CarService carService;
 
     @PostMapping("/save")
-    public ResponseUtil saveCar(CarDTO dto) {
+    public ResponseUtil saveCar(@RequestBody CarDTO dto) {
         carService.saveCar(dto);
         return new ResponseUtil("OK", "Car Saved", dto);
     }
 
+    @PutMapping("/update")
+    public ResponseUtil updateCar(@RequestBody CarDTO dto){
+        carService.saveCar(dto);
+        return new ResponseUtil("OK","Car Updated",dto);
+    }
 
     @GetMapping("/getall")
     public ResponseUtil getAllCars() {
