@@ -52,7 +52,7 @@
         <div class="carSecText">
             <h1 class="text-primary fw-bold">Available Cars</h1>
         </div>
-        <section class="container-fluid carCardSet1 d-flex justify-content-start flex-wrap" style="min-height: 100vh">
+        <section id="carsView" class="container-fluid carCardSet1 d-flex justify-content-start flex-wrap" style="min-height: 100vh">
 
             <div style="height: 350px" class="carCard ms-2 me-5">
                 <div class="carImg">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="carDetail">
                     <div>
-                        <h1>{car.brand}</h1>
+                        <h1></h1>
                         <h2 class="dailyPrice">LKR</h2>
                         <h2 class="monthlyPrice">227,150.00LKR/month</h2>
                     </div>
@@ -136,7 +136,7 @@
                             <input aria-label="Rent ID" class="form-control" id="rentId" name="rentId" type="text">
                         </div>
                         <div class="col-3">
-                            <label class="form-label" for="userNic">User NIC</label>
+                            <label class="form-label" for="userNic">Customer Id</label>
                             <input aria-label="Last name" class="form-control" id="userNic" name="userNic" type="text">
                         </div>
                         <div class="col-2">
@@ -209,19 +209,20 @@
 
                 <div class="col-5 rentCarDetail shadow rounded-4 mt-1" style="height: 510px">
                     <div class="row mt-3">
+
                         <div class="col">
                             <label class="form-label" for="carRegNo">Car Register NO</label>
-                            <select aria-label="Default select example" class="form-select" id="carRegNo"
-                                    name="carRegNo">
-
-                            </select>
+                            <input aria-label="Brand" class="form-control" id="carRegNo" name="brand" type="text">
                         </div>
+
                         <div class="col">
                             <label class="form-label" for="brand">Brand</label>
                             <input aria-label="Brand" class="form-control" id="brand" name="brand" type="text">
                         </div>
+
                     </div>
                     <div class="row mt-3">
+
                         <div class="col">
                             <label class="form-label" for="transMissionType">Transmission type</label>
                             <input aria-label="Transmission type" class="form-control" id="transMissionType"
@@ -234,6 +235,7 @@
                                    name="noOfPassengers"
                                    type="text">
                         </div>
+
                     </div>
                     <div class="row mt-3">
                         <div class="col">
@@ -264,11 +266,8 @@
                     <div class="row mt-3">
                         <div class="col">
                             <label class="form-label" for="driverState">Driver or not</label>
-                            <select aria-label="Default select example" class="form-select" id="driverState"
-                                    name="driverState">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
+                            <input aria-label="Return Time" class="form-control" id="driverState" name="returnTime"
+                                   type="text">
 
                         </div>
                         <div class="col">
@@ -282,7 +281,7 @@
                     </div>
                     <div class="gap-5 mt-4 d-flex justify-content-center " role="">
                         <button class="btn btn-outline-warning m-2 col-4" id="addCart" type="button">Add Cart</button>
-                        <button class="btn btn-primary  col-4 m-2" id="res" type="button">Reservation</button>
+                        <button class="btn btn-primary  col-4 m-2" id="reservation" type="button">Reservation</button>
                     </div>
                 </div>
             </div>
@@ -394,6 +393,7 @@
 
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <!--<script src="controllers/DashBoardController.js"></script>-->
+<script src="../controllers/customerCarControllers.js"></script>
 
 
 <script src="../assets/js/bootstrap.js"></script>

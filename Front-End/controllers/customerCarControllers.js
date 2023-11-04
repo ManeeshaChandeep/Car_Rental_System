@@ -1,29 +1,29 @@
-let carURL='http://localhost:8080/carRental/car/';
+let carURL = 'http://localhost:8081/carRental/car/';
+let allCars = [];
 
-
-function getCarOB(){
-    let car={
-        registernumber:$('#txtRegisterNumber').val(),
-        brand:$('#txtBrand').val(),
-        rates:$('#slctRates').val(),
-        frontview:$('#fileFrontView').val(),
-        backview:$('#fileBackView').val(),
-        freemilage:$('#txtFreeMilage').val(),
-        sideview:$('#fileSideView').val(),
-        interior:$('#fileinterior').val(),
-        numberofpassengers:$('#txtNumberofPassengers').val(),
-        type:$('#txtType').val(),
-        dailyrate:$('#txtDailyRate').val(),
-         mothlyrate:$('#txtMonthlyRate').val(),
-        priceofextrakm:$('#txtPriceofExtraKm').val(),
-        color:$('#txtColor').val(),
-        vehicleavailabilitytype:$('#slctVehicleAvailabilityType').val(),
+function getCarOB() {
+    let car = {
+        registernumber: $('#txtRegisterNumber').val(),
+        brand: $('#txtBrand').val(),
+        rates: $('#slctRates').val(),
+        frontview: $('#fileFrontView').val(),
+        backview: $('#fileBackView').val(),
+        freemilage: $('#txtFreeMilage').val(),
+        sideview: $('#fileSideView').val(),
+        interior: $('#fileinterior').val(),
+        numberofpassengers: $('#txtNumberofPassengers').val(),
+        type: $('#txtType').val(),
+        dailyrate: $('#txtDailyRate').val(),
+        mothlyrate: $('#txtMonthlyRate').val(),
+        priceofextrakm: $('#txtPriceofExtraKm').val(),
+        color: $('#txtColor').val(),
+        vehicleavailabilitytype: $('#slctVehicleAvailabilityType').val(),
     }
 
-return car;
+    return car;
 }
 
-
+loadAllCars();
 
 
 $('#btnSaveCar').click(function () {
@@ -64,14 +64,17 @@ $('#btnUpdateCar').click(function () {
         }
     });
 });
-function loadAllCars(){
+
+function loadAllCars() {
     $.ajax({
-        url: carURL + 'getall',
+        url: 'http://localhost:8081/carRental/car/getall',
         method: 'GET',
         success: function (res) {
-            console.log(res.data);
+            allCars = res.data;
+            $('#carsView').empty();
+            $('#carRegNo').empty();
             for (let i = 0; i < res.data.length; i++) {
-                loadCarDetails(res.data.length[i])
+                loadCarDetails(res.data[i]);
             }
         },
         error: function (error) {
@@ -82,11 +85,11 @@ function loadAllCars(){
 
 function loadCarDetails(car) {
 
-
+    $('#carRegNo').append(`<option class="carRegOption" carid="${JSON.stringify(car)}"> ${car.registernumber} </option>`);
     // car.registernumber
 
 
-    let carHtml=`<div style="height: 350px" class="carCard ms-2 me-5">
+    let carHtml = `<div style="height: 350px" class="carCard ms-2 me-5">
                 <div class="carImg">
 
                     <div class="carousel slide" data-bs-ride="carousel" >
@@ -134,12 +137,89 @@ function loadCarDetails(car) {
                         </div>
                         <div>
                             <img alt="logo" height="20" src="assets/img/petrol-pump.png" width="20">
-                            <h1>${car.vehicleavailabilitytype}</h1>vehicleavailabilitytype
+                            <h1>${car.vehicleavailabilitytype}</h1>
                         </div>
                     </div>
                     <div>
-                        <button class="rentNow btn btn-outline-primary  ">Rent Now</button>
+                        <button carID='${JSON.stringify(car)}' class="rentNow btn btn-outline-primary">Rent Now</button>
                     </div>
                 </div>
             </div>`
+
+    $('#carsView').append(carHtml);
 }
+
+$(document).ready(function () {
+
+    $(document).on('click', '.rentNow', function () {
+        let attr = $(this).attr('carID');
+        let car = JSON.parse($(this).attr('carID'));
+        console.log(attr);
+        $('#addCart').attr('car', attr);
+        $('#cost').val(car.dailyrate);
+        $('#carRegNo').val(car.registernumber);
+        $('#brand').val(car.brand);
+        $('#transMissionType').val(car.type);
+        $('#noOfPassengers').val(car.numberofpassengers);
+    })
+});
+
+$('#addCart').click(function () {
+    loadCarTr(JSON.parse($('#addCart').attr('car')))
+    $('#driverState').val("");
+});
+
+let rentDetails = [];
+
+function loadCarTr(car) {
+    let tr = `<tr>
+                 <td>${car.registernumber}</td>
+                 <td>${$('#pickUpDate').val()}</td>
+                 <td>${$('#pickUpTime').val()}</td>
+                 <td>${$('#returnDate').val()}</td>
+                 <td>${$('#returnTime').val()}</td>
+                 <td>${$('#driverState').val()}</td>
+                 <td>${$('#location').val()}</td>
+            </tr>`
+
+
+    $('#cart').append(tr);
+
+    let detail = {
+        rentid: $('#rentId').val(),
+        carid: car.registernumber,
+        driver: $('#driverState').val()
+    }
+
+    rentDetails.push(detail);
+}
+
+
+$('#reservation').click(function () {
+    let rent = {
+        rentid: $('#rentId').val(),
+        customerid: $('#userNic').val(),
+        pickupDate: $('#pickUpDate').val(),
+        returnDate: $('#returnDate').val(),
+        rentDetails: rentDetails
+    }
+
+    console.log(rent);
+
+    $.ajax({
+        url: 'http://localhost:8081/carRental/rent/save',
+        method: 'POST',
+        data:JSON.stringify(rent),
+        contentType:'application/json',
+        success: function (res) {
+
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+
+})
+
+$('#rentId');
+$('#userNic');

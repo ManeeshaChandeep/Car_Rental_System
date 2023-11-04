@@ -1,27 +1,26 @@
-package spring.entity;
+package spring.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import spring.entity.RentDetails;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
 
-@Entity
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Rent {
-    @Id
+public class  RentDTO{
+
     private String rentid;
     private String customerid;
     private String pickupDate;
     private String returnDate;
-    @OneToMany(mappedBy = "rent", cascade = CascadeType.ALL)
-    private List<RentDetails> rentDetails;
+    private List<RentDetailsDTO> rentDetails;
 }

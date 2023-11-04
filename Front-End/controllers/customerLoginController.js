@@ -1,4 +1,4 @@
-let customerURL='http://localhost:8080/carRental/customer/';
+let customerURL='http://localhost:8081/carRental/customer/';
 
 function getCustomerOB() {
     let customer={
@@ -57,15 +57,46 @@ $('#-updatecu*stomer').click(function () {
 });
 
 
+// function loadAllCustomers(){
+//     $.ajax({
+//         url: customerURL + 'getall',
+//         method: 'GET',
+//         success: function (res) {
+//             console.log(res.data);
+//         },
+//         error: function (error) {
+//             console.error('Error:', error);
+//         }
+//     });
+// }
+
+
+loadAllCustomers();
 function loadAllCustomers(){
     $.ajax({
         url: customerURL + 'getall',
         method: 'GET',
         success: function (res) {
             console.log(res.data);
+            $('#customerDetails').empty();
+            for (let i = 0; i < res.data.length; i++) {
+                loadTable(res.data[i]);
+            }
         },
         error: function (error) {
             console.error('Error:', error);
         }
     });
+}
+
+
+function loadTable(customer) {
+    let tr=`<tr>
+                                    <td>${customer.id}</td>
+                                    <td>${customer.name}</td>
+                                    <td>${customer.email}</td>
+                                    <td>${customer.address}</td>
+                                </tr>`;
+
+    $('#customerDetails').append(tr);
 }
